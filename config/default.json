@@ -1,6 +1,6 @@
 {
   "supported-events": ["presence"],
-  "domain": "example.com",
+  "domain": "sip.qa.phone.com",
   "methods": {
     "publish": {
       "expires": {

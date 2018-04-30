@@ -1,0 +1,51 @@
+{
+  "drachtio": {
+    "host": "127.0.0.1",
+    "port": 9022,
+    "secret": "cymru"
+  },
+  "redis" : {
+    "address": "127.0.0.1",
+    "port": 9379
+  },
+  "supported-events": ["presence"],
+  "domain": "sip.qa.phone.com",
+  "methods": {
+    "publish": {
+      "expires": {
+        "min": 30,
+        "default": 3600,
+        "max": 7200
+      }      
+    },
+    "subscribe": {
+      "authenticate": true,
+      "expires": {
+        "min": 30,
+        "default": {
+          "presence": 3600
+        }
+      }
+    },
+    "message": {
+      "authenticate": true
+    }
+  },
+  "sql": {
+    "unified": {
+      "host": "unified",
+      "user": "fs_user",
+      "password": "3ufRephe",
+      "database": "unified_db",
+      "connectionLimit": 10      
+    },
+    "freeswitch": {
+      "host": "fs-db02",
+      "user": "fs_user",
+      "password": "3ufRephe",
+      "database": "freeswitch",
+      "connectionLimit": 10      
+    }
+  }
+
+}
