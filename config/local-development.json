@@ -6,7 +6,7 @@
   },
   "redis" : {
     "address": "127.0.0.1",
-    "port": 9379
+    "port": 6379
   },
   "supported-events": ["presence"],
   "domain": "sip.qa.phone.com",
