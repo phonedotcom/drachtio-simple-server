@@ -47,7 +47,7 @@ if (process.env.NODE_ENV === 'test') {
   authenticator = require('./lib/plugins/authenticate-test');
 }
 else {
-  authenticator = require('./lib/plugins/your-authenticator-here');
+  authenticator = require('./lib/plugins/authenticate');
 }
 
 if (enabled.options) {
