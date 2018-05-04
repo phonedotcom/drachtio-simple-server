@@ -28,7 +28,11 @@
       }
     },
     "message": {
+<<<<<<< HEAD
       "authenticate": false
+=======
+      "authenticate": true
+>>>>>>> 6c922e2373f4bf91d69c2fae487b1f58593b8d3c
     }
   },
   "sql": {
