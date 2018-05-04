@@ -28,7 +28,7 @@
       }
     },
     "message": {
-      "authenticate": true
+      "authenticate": false
     }
   },
   "sql": {
