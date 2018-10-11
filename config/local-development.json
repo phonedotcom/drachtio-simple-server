@@ -10,6 +10,11 @@
   },
   "supported-events": ["presence"],
   "domain": "sip.qa.phone.com",
+  "logging": {
+    "options": {
+      "level": "info"
+    }
+  },
   "methods": {
     "publish": {
       "expires": {

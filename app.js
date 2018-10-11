@@ -5,7 +5,7 @@ const srf = new Srf();
 const Db = require('./lib/db/redis');
 const argv = require('minimist')(process.argv.slice(2));
 const noop = () => {};
-const logger = pino({serializers: {err: pino.stdSerializers.err}});
+const logger = pino(config.get('logging.options'));
 const db = new Db({logger});
 
 if (process.env.NODE_ENV === 'test') {
@@ -20,7 +20,7 @@ process.on('unhandledRejection', (reason, p) => {
 // e.g. node app.js publish subscribe # will only handle PUBLISH and SUBSCRIBE messages
 
 const enabled = {};
-['subscribe', 'publish', 'message'].forEach((type) => {
+['subscribe', 'publish', 'message', 'options'].forEach((type) => {
   enabled[type] = argv._.length === 0 || -1 != argv._.indexOf(type);
 });
 
